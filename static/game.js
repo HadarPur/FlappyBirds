@@ -22,6 +22,10 @@ document.addEventListener('keydown', function(event){
     }
 } );
 
+document.addEventListener('keyup', function(event){
+     stopMove();
+} );
+
 socket.on('player added', data => {
     var name = document.createElement("p");
     name.setAttribute("style", "color:" + data.color);
