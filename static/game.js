@@ -5,6 +5,23 @@ var players = [];
 var socket = io();
 var parent;
 
+document.addEventListener('keydown', function(event){
+    switch(event.keyCode) {
+        case 37:
+            moveleft();
+            break;
+        case 38:
+            moveup();
+            break;
+        case 39:
+            moveright();
+            break;
+        case 40:
+            movedown();
+            break;
+    }
+} );
+
 socket.on('player added', data => {
     var name = document.createElement("p");
     name.setAttribute("style", "color:" + data.color);
