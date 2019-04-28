@@ -69,7 +69,7 @@ socket.on('finish', players => {
 function startGame() {
     document.getElementById("move").hidden = true;
     myGameArea.createCanvas();
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myScore = new component("20px", "Brush Script MT", "black", 360, 20, "text");
 }
 
 function component(width, height, color, x, y, type) {
@@ -128,8 +128,6 @@ function getReady() {
         name.setAttribute("style", "color:" + color);
         myGamePiece = new component(30, 30, color, 10, 120);
         name.textContent = user_name;
-        /*parent.appendChild(name);
-        parent.appendChild(br);*/
     });
 }
 

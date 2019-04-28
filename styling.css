@@ -1,0 +1,33 @@
+	#mainPageBody {  
+		padding: 5px;
+		background: url("./fb.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+	.button {
+		background-color: rgb(104, 105, 105);
+		border: none;
+		color: white;
+		border-radius: 12px;
+		padding: 5px 5px;
+		font-size: 10px;
+		margin: 5px;
+		cursor: pointer;
+		font-family: 'Brush Script MT';
+
+	}
+
+	/* Darker background on mouse-over */
+	.button:hover {
+		background-color: rgb(51, 50, 50);
+	}
+
+	.button1 {width: 100px;}
+
+	div.c {
+		font-size: 150%;
+		font-family: 'Brush Script MT';
+		text-align: center;
+	} 

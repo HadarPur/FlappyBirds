@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Multiplayer Flappy Bird</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <style>
+            canvas {
+                border: 1px solid #d3d3d3;
+                background-color: #f1f1f1;
+                padding: 0;
+                margin: auto;
+                display: block;
+                width: 800px;
+            }
+            
+            .button {
+                background-color: rgb(104, 105, 105);
+                border: none;
+                color: white;
+                border-radius: 12px;
+                padding: 5px 5px;
+                font-size: 10px;
+                margin: 5px;
+                cursor: pointer;
+                font-family: 'Brush Script MT';
 
-<head>
-    <title>Multiplayer Flappy Bird</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <style>
-        canvas {
-            border: 1px solid #d3d3d3;
-            background-color: #f1f1f1;
-        }
-    </style>
-</head>
+            }
 
-<body onload="startGame()">
-    <div id="info">
-        <div id="input">
-            <p color="red">Enter your name</p>
-            <input type="text" id="name">
-            <button id="accept" onclick="getReady()">OK</button>
+            /* Darker background on mouse-over */
+            .button:hover {
+                background-color: rgb(51, 50, 50);
+            }
+
+            .button1 {width: 100px;}
+            .button2 {width: 80px;}
+
+            div.c {
+                font-size: 150%;
+                font-family: 'Brush Script MT';
+                text-align: center;
+            } 
+        </style>
+    </head>
+
+    <body id = "mainPageBody" onload="startGame()">
+        <div class="c" id="info">
+            <div class="c" id="input">
+                <p color="red">Enter your name</p>
+                <input type="text" id="name"><br>
+                <button class = "button button2" id="accept" onclick="getReady()">OK</button>
+            </div>
         </div>
-    </div>
-    <div>
-        <script src="/static/game.js"></script>
-        <div id="players">
-            <h1 id="name"></h1>
-            <p id="waiting"></p>
+
+        <div class="c">
+            <script src="/static/game.js"></script>
+            <div id="players">
+                <h1 id="name"></h1>
+                <p id="waiting"></p>
+            </div>
         </div>
-    </div>
-    <div id="move">
-        <button id = "up" onmouseup="stopMove()" onmousedown="moveup()">UP</button>
-        <br>
-        <button id = "left" onmouseup="stopMove()" onmousedown="moveleft()">LEFT</button>
-        <button id = "right" onmouseup="stopMove()" onmousedown="moveright()">RIGHT</button>
-        <br>
-        <button id = "down" onmouseup="stopMove()" onmousedown="movedown()">DOWN</button>
-    </div>
 
-</body>
-
+        <div class="c" id="move">
+            <button class = "button button1" id = "up" onmouseup="stopMove()" onmousedown="moveup()">UP</button><br>
+            <button class = "button button1" id = "left" onmouseup="stopMove()" onmousedown="moveleft()">LEFT</button>
+            <button class = "button button1" id = "right" onmouseup="stopMove()" onmousedown="moveright()">RIGHT</button><br>
+            <button class = "button button1" id = "down" onmouseup="stopMove()" onmousedown="movedown()">DOWN</button>
+        </div>
+    </body>
 </html>

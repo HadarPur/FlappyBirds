@@ -44,7 +44,6 @@ io.on("connection", socket => {
             num_of_players_finish = 0;
             players = [];
         }
-
     });
 });
 
